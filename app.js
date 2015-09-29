@@ -202,7 +202,8 @@ PinnacleSportsClient.prototype.get = function(url, options){
 	  url: url + '?' + querystring.stringify(options || {}),
 	  headers: {
 	    'Authorization': this.auth
-	  }
+	  },
+	  timeout: 15e3
 	};
 
 	request(request_options, function (error, response, body) {
