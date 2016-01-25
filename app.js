@@ -258,7 +258,7 @@ function processResponse(error, body){
 
 					if(json_result.err){
 						//the API returned an error
-						deferred.reject(JSON.stringify(json_result.err));
+						deferred.reject(json_result.err);
 					}
 					else{
 						//all good
@@ -276,11 +276,11 @@ function processResponse(error, body){
 
 			if(result.code && result.message){
 				//the API returned an error
-				deferred.reject(JSON.stringify(result));
+				deferred.reject(result);
 			}
 			else if(result.errorCode){
 				//the API returned an error
-				deferred.reject(JSON.stringify(result));
+				deferred.reject(result);
 			}
 			else{
 				//all good
