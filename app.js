@@ -53,6 +53,10 @@ var operations = [
         endpoint: 'fixtures'
     },
     {
+        name: 'get_settled_fixtures',
+        endpoint: 'fixtures/settled'
+    },
+    {
         name: 'get_odds',
         endpoint: 'odds'
     },
