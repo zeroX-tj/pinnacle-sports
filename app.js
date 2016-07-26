@@ -175,8 +175,7 @@ PinnacleSportsClient.prototype.post = function (url, options) {
             'Authorization': this.auth,
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(options || {}),
-        timeout: 15e3
+        body: JSON.stringify(options || {})
     };
 
     request.post(request_options, function (error, response, body) {
@@ -202,7 +201,7 @@ PinnacleSportsClient.prototype.get = function (url, options) {
         headers: {
             'Authorization': this.auth
         },
-        timeout: 15e3
+        timeout: 120e3
     };
 
     request(request_options, function (error, response, body) {
