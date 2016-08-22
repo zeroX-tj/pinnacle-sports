@@ -111,6 +111,10 @@ var operations = [
     {
         name: 'get_translations',
         endpoint: 'translations'
+    },
+    {
+        name: 'get_settled',
+        endpoint: 'fixtures/settled'
     }
 ];
 
