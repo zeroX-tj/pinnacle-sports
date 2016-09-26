@@ -119,8 +119,9 @@ var operations = [
 ];
 
 
-function PinnacleSportsClient(username, password) {
+function PinnacleSportsClient(username, password, proxy) {
     this.auth = 'Basic ' + new Buffer(username + ':' + password).toString('base64');
+    this.proxy = proxy;
 }
 
 
@@ -179,6 +180,7 @@ PinnacleSportsClient.prototype.post = function (url, options) {
 
     var request_options = {
         url: url,
+        proxy: this.proxy,
         headers: {
             'Authorization': this.auth,
             'Content-Type': 'application/json'
