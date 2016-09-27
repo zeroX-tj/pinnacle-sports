@@ -156,14 +156,14 @@ operations.forEach(function (operation) {
 });
 
 
-exports.createClient = function (username, password) {
+exports.createClient = function (username, password, proxy) {
 
     if (!username || !password) {
         throw new Error('no username and/or password provided in createClient()');
         return;
     }
 
-    return new PinnacleSportsClient(username, password);
+    return new PinnacleSportsClient(username, password, proxy);
 };
 
 exports.create_client = exports.createClient;
