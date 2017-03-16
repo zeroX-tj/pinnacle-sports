@@ -4,7 +4,7 @@ var querystring = require('querystring');
 var parseString = require('xml2js').parseString;
 var uuid = require('node-uuid');
 
-var pinnacle_api_url = 'https://api.pinnaclesports.com/v1/';
+var pinnacle_api_url = 'https://api.pinnacle.com/v1/';
 
 
 // List of all the operations supported by the API
